@@ -4,7 +4,7 @@
 
 - name: Install bumblebee nVidia packages
   dnf:
-    name: ['akmod-nvidia','acpi','acpid']
+    name: ['kernel-devel','akmod-nvidia','acpi','acpid']
     state: present
 
 - name: Create group bumblebee
