@@ -4,6 +4,6 @@
 - name: Adding szydell to additional groups  
   user: 
     name: szydell 
-    groups: dialout, lock
+    groups: dialout, lock, audio, video, vboxsf
     append: yes
 

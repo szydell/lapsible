@@ -3,7 +3,6 @@
   become: true
 
   tasks:
-    - include: tasks/users.yml
     - include: tasks/ssh.yml
     - include: tasks/trash.yml
     - include: tasks/crontab.yml
@@ -15,5 +14,6 @@
     - include: tasks/bitwarden.yml
     - include: tasks/onedrive.yml
     - include: tasks/bumblebee.yml
+    - include: tasks/users.yml
 
 
