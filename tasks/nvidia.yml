@@ -22,3 +22,6 @@
 - name: copy SDDM config
   copy: src=files/Xsetup dest="/etc/sddm/Xsetup" owner=root group=root mode=0755
 
+- name: copy xorg config
+  copy: src=files/xorg.conf dest="/etc/X11/xorg.conf" owner=root group=root mode=0644
+
