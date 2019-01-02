@@ -13,7 +13,7 @@
     - include: tasks/kde.yml
     - include: tasks/bitwarden.yml
     - include: tasks/onedrive.yml
-    - include: tasks/bumblebee.yml
+    - include: tasks/nvidia.yml
     - include: tasks/users.yml
 
 
