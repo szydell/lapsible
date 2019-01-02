@@ -18,3 +18,7 @@
     name: ['nvidia-settings','kernel-devel','dkms-nvidia']
     state: present
 
+
+- name: copy SDDM config
+  copy: src=files/Xsetup dest="/etc/sddm/Xsetup" owner=root group=root mode=0755
+
