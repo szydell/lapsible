@@ -1,11 +1,20 @@
-- name: Add Negativo17 nVidia repo
+#Import klucza do Negativo17 repository
+- name: import key to verify Negativo17 repo
+  rpm_key:
+    state: present
+    key: https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
+
+- name: Add Negativo17 repository 
   yum_repository:
-    name: n17_nVidia
-    description: Negativo17 nVidia repo
-    baseurl: https://negativo17.org/repos/fedora-nvidia.repo
+    name: n17_nVidia 
+    description: Negativo17 nvidia repository
+    baseurl: https://negativo17.org/repos/nvidia/fedora-$releasever/$basearch/
+    gpgcheck: yes
+    gpgkey: https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
+
 
 - name: Install nVidia packages
   dnf:
-    name: ['nvidia-settings','kernel-devel','dkms-nvidia','vulkan.i686', 'nvidia-driver-libs.i686']
+    name: ['nvidia-settings','kernel-devel','dkms-nvidia']
     state: present
 
