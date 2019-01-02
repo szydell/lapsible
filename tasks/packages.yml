@@ -5,7 +5,7 @@
 
 - name: Install packages
   dnf:
-    name: ['@Development tools', 'arduino', 'esptool', 'nmap', 'snapd', 'htop', 'mc', 'vim', 'golang', 'flatpak', 'gcompris', 'gcompris-qt-activities', 'code', 'strace', 'vlc-extras', 'libcurl-devel', 'sqlite-devel', 'NetworkManager-tui','VirtualBox','steam','fedora-workstation-repositories','cargo', 'dbus-devel','rpm-build','rpkg']
+    name: ['@Development tools', 'arduino', 'esptool', 'nmap', 'snapd', 'htop', 'mc', 'vim', 'golang', 'flatpak', 'gcompris', 'gcompris-qt-activities', 'code', 'strace', 'vlc-extras', 'libcurl-devel', 'sqlite-devel', 'NetworkManager-tui','VirtualBox','steam','fedora-workstation-repositories','cargo', 'dbus-devel','rpm-build','rpkg','acpi','acpid']
     state: present
 
 - name: Create symlink for snapd
@@ -21,7 +21,13 @@
   service:
     name: snapd
     state: started
+    enabled: yes
 
+- name: Start and enable acpid service
+  service:
+    name: acpid
+    state: started
+    enabled: yes
 
 - name: pip install ansible-lint
   pip:
