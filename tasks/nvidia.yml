@@ -1,0 +1,11 @@
+- name: Add Negativo17 nVidia repo
+  yum_repository:
+    name: n17_nVidia
+    description: Negativo17 nVidia repo
+    baseurl: https://negativo17.org/repos/fedora-nvidia.repo
+
+- name: Install nVidia packages
+  dnf:
+    name: ['nvidia-settings','kernel-devel','dkms-nvidia','vulkan.i686', 'nvidia-driver-libs.i686']
+    state: present
+
