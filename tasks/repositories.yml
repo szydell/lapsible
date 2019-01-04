@@ -32,6 +32,7 @@
     key: https://copr-be.cloud.fedoraproject.org/results/clime/rpkg-util/pubkey.gpg
 
 - name: Add rpkg copr
+  warn: False
   command: dnf copr enable clime/rpkg-util -y
 
 
