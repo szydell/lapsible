@@ -1,0 +1,6 @@
+- name: Define additional paths
+  copy:
+   dest: "/etc/profile.d/szydell_paths.sh"
+      content: |
+        export PATH="$PATH:$HOME/OneDrive/scripts"
+
