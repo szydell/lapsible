@@ -22,6 +22,7 @@
 - name: copy SDDM config
   copy: src=files/Xsetup dest="/etc/sddm/Xsetup" owner=root group=root mode=0755
 
-- name: copy xorg config
-  copy: src=files/xorg.conf dest="/etc/X11/xorg.conf" owner=root group=root mode=0644
+# config collides with intel/nvidia switching from system76-power. Left as a note.
+#- name: copy xorg config
+  #copy: src=files/xorg.conf dest="/etc/X11/xorg.conf" owner=root group=root mode=0644
 
