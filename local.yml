@@ -15,5 +15,6 @@
     - include: tasks/onedrive.yml
     - include: tasks/nvidia.yml
     - include: tasks/users.yml
+    - include: tasks/paths.yml
 
 
