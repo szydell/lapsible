@@ -1,7 +1,7 @@
 - name: Define additional paths
   copy:
    dest: "/etc/profile.d/szydell_paths.sh"
-   content: 'export PATH="$PATH:$HOME/OneDrive/scripts:.cargo/bin"'
+   content: 'export PATH="$PATH:$HOME/OneDrive/scripts:$HOME/.cargo/bin"'
    mode: 0644
 
 
