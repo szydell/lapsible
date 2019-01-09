@@ -1,0 +1,5 @@
+- name: copy sudoers_szydell
+  copy: src=files/sudoers_szydell dest=/etc/sudoers.d/szydell owner=root group=root mode=0440
+
+- name: set locale
+  copy: src=files/locale.conf dest=/etc/locale.conf owner=root group=root mode=0644

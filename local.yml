@@ -6,7 +6,7 @@
     - include: tasks/ssh.yml
     - include: tasks/trash.yml
     - include: tasks/crontab.yml
-    - include: tasks/sudoers.yml
+    - include: tasks/etc.yml
     - include: tasks/repositories.yml
     - include: tasks/packages.yml
     - include: tasks/flatpak.yml
