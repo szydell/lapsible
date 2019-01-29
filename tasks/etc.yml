@@ -3,3 +3,9 @@
 
 - name: set locale
   copy: src=files/locale.conf dest=/etc/locale.conf owner=root group=root mode=0644
+
+- name: set locale in kde
+  copy: src=files/plasma-localerc dest=~/.config/plasma-localerc owner=szydell group=szydell mode=0640
+  become: true
+  become+user: szydell
+
