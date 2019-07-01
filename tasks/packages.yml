@@ -5,7 +5,7 @@
 
 - name: Install packages
   dnf:
-    name: ['@Development tools', 'arduino', 'esptool', 'nmap', 'snapd', 'htop', 'mc', 'vim', 'golang', 'flatpak', 'gcompris', 'gcompris-qt-activities', 'code', 'strace', 'vlc-extras', 'libcurl-devel', 'sqlite-devel', 'NetworkManager-tui','VirtualBox','steam','fedora-workstation-repositories','cargo', 'dbus-devel','rpm-build','rpkg','acpi','acpid','youtube-dl','nvidia-driver-libs.i686','gcc-c++','cmake','assimp-devel','aspell-pl', 'autocorr-pl', 'glibc-langpack-pl', 'langpacks-pl']
+    name: ['@Development tools', 'arduino', 'esptool', 'nmap', 'snapd', 'htop', 'mc', 'vim', 'golang', 'flatpak', 'gcompris', 'gcompris-qt-activities', 'code', 'strace', 'vlc-extras', 'libcurl-devel', 'sqlite-devel', 'NetworkManager-tui','VirtualBox-6.0','steam','fedora-workstation-repositories','cargo', 'dbus-devel','rpm-build','rpkg','acpi','acpid','youtube-dl','nvidia-driver-libs.i686','gcc-c++','cmake','assimp-devel','aspell-pl', 'autocorr-pl', 'glibc-langpack-pl', 'langpacks-pl']
     state: present
 
 - name: Create symlink for snapd
