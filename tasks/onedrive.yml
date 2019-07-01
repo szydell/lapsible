@@ -13,6 +13,16 @@
   become_method: sudo
   become_user: "szydell"
 
+- name: Install packages
+  dnf:
+    name: ['libnotify-devel']
+    state: present
+
+- name: configure OneDrive client
+  command: cd /home/szydell/development/onedrive && ./configure
+  become: yes
+  become_user: szydell
+
 - name: compile OneDrive client (make)
   make:
     chdir: /home/szydell/development/onedrive
