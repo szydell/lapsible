@@ -19,7 +19,7 @@
     state: present
 
 - name: configure OneDrive client
-  command: ./configure
+  command: ./configure DC=/var/lib/snapd/snap/bin/dmd
   args:
     chdir: /home/szydell/development/onedrive
   become: yes
