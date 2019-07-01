@@ -19,7 +19,7 @@
     state: present
 
 - name: configure OneDrive client
-  command: configure
+  command: ./configure
   args:
     chdir: /home/szydell/development/onedrive
   become: yes
