@@ -19,9 +19,9 @@
     state: present
 
 - name: configure OneDrive client
-  command: ./configure
+  command: configure
   args:
-    chdir: "cd /home/szydell/development/onedrive"
+    chdir: /home/szydell/development/onedrive
   become: yes
   become_user: szydell
 
