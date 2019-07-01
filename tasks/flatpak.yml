@@ -20,6 +20,6 @@
   become_user: szydell
 
 - name: Flatpak update
-  command: flatpak update
+  command: flatpak update -y
   become: true
   become_user: szydell
